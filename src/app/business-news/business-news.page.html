@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-button [routerLink]="['/tech-news']">Tech</ion-button>
+  <ion-button [routerLink]="['/bitcoin-news']">Bitcoin</ion-button>
+  <ion-button [routerLink]="['/stock-market-news']">Stock</ion-button>
+  <ion-button [routerLink]="['/business-news']">Business</ion-button>
+  <ion-card *ngFor="let bus of businessData" id="tech">
+    <ion-card-header>
+      <a href="{{bus.url}}">
+        <img src="{{bus.urlToImage}}"></a>
+      <ion-card-subtitle color="warning">{{bus.author}}</ion-card-subtitle>
+      <ion-card-title color="warning">{{bus.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{bus.content}}</p>
+      <br>
+      <p>{{bus.publishedAt}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

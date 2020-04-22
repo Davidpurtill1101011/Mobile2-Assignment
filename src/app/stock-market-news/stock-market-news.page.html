@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button [routerLink]="['/tech-news']">
+      <ion-icon name="home-sharp"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['/bitcoin-news']">Bitcoin</ion-button>
+    <ion-button [routerLink]="['/stock-market-news']">Stock</ion-button>
+    <ion-button [routerLink]="['/business-news']">Business</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let stock of stockData" id="tech">
+    <ion-card-header>
+      <a href="{{stock.url}}">
+        <img src="{{stock.urlToImage}}"></a>
+      <ion-card-subtitle>{{stock.author}}</ion-card-subtitle>
+      <ion-card-title color="warning">{{stock.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content >
+      <p>{{stock.description}}</p>
+      <br>
+      <p>{{stock.publishedAt}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

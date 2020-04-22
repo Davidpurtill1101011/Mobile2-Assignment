@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button [routerLink]="['/home']">
+      <ion-icon name="home-sharp"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['/bitcoin-news']">
+      <ion-icon name="logo-bitcoin"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['/stock-market-news']">
+      <ion-icon name="logo-euro"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['/business-news']">
+      <ion-icon name="newspaper-sharp"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let tech of techData" id="tech">
+    <ion-card-header>
+      <a href="{{tech.url}}">
+        <img src="{{tech.urlToImage}}"></a>
+      <ion-card-subtitle>{{tech.author}}</ion-card-subtitle>
+      <ion-card-title color="warning">{{tech.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{tech.description}}</p>
+      <br>
+      <p>{{tech.publishedAt}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
