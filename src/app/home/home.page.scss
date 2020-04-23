@@ -1,5 +1,5 @@
 #weazel{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0 auto; 
   float: none; 
   width: auto;
@@ -8,8 +8,26 @@
   
 }
 
-.hr {
-  border-bottom: 1px solid #ccc;
-  margin: 10px 0;
-  width: 100%;
+#tech {
+  margin: 0 auto; 
+  float: none; 
+  margin-bottom: 10px;
+  background-image: url(https://ak4.picdn.net/shutterstock/videos/17413294/thumb/1.jpg);
+  image-rendering: auto;
+  width: auto;
+  height: auto;
+}
+p{
+  color: red;
+  font-family: sans-serif;
+}
+#headline{
+  font-family:  Georgia, 'Times New Roman', Times, serif;
+}
+
+ion-content{
+  --ion-background-color:rgb(31, 43, 16);
+}
+ion-toolbar{
+  --ion-background-color:rgb(53, 52, 52);
 }

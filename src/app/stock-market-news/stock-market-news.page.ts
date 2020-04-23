@@ -10,6 +10,7 @@ export class StockMarketNewsPage implements OnInit {
   constructor(private science:StockService) { }
 
   ngOnInit() {
+    // getting the data from the JSON to send it to the html page.
     this.science.getStockNews().subscribe(
       (data)=>{
         this.scienceData = data.articles;

@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class TechService {
 
   constructor(private tech: HttpClient) { }
-
+// getting tech-crunch api
   getTechNews():Observable<any>{
-    return this.tech.get('http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=051be681cb68446c9be30fdc723d4148');
+    return this.tech.get('http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=538d64ffe9f540ae86a47eae6509f215');
   }
 }

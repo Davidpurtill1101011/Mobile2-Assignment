@@ -12,6 +12,7 @@ bitData:any=[];
   ngOnInit() {
     this.bit.getBitcoinNews().subscribe(
       (data)=>{
+        // getting the data from the JSON to send it to the html page.
         this.bitData = data.articles;
       }
     );

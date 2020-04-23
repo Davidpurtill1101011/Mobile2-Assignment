@@ -12,6 +12,7 @@ export class TechNewsPage implements OnInit {
   constructor(private tech: TechService) { }
 
   ngOnInit() {
+    // getting the data from the JSON to send it to the html page.
     this.tech.getTechNews().subscribe(
       (data) => {
         this.techData = data.articles;

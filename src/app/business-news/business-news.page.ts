@@ -12,6 +12,7 @@ export class BusinessNewsPage implements OnInit {
   ngOnInit() {
     this.business.getBusinessNews().subscribe(
       (data)=>{
+        // getting the data from the JSON to send it to the html page.
         this.businessData = data.articles;
       }
     );

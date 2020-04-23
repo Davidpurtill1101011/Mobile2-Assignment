@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 })
 export class BitcoinService {
   constructor(private bitcn:HttpClient) { }
-  
+  // getting the api for the bitcoin news
   getBitcoinNews():Observable<any>{
-    return this.bitcn.get('http://newsapi.org/v2/everything?q=bitcoin&from=2020-03-22&sortBy=publishedAt&apiKey=051be681cb68446c9be30fdc723d4148');
+    return this.bitcn.get('http://newsapi.org/v2/everything?q=bitcoin&from=2020-03-23&sortBy=publishedAt&apiKey=538d64ffe9f540ae86a47eae6509f215');
   }
 }

@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 export class StockService {
 
   constructor(private stock:HttpClient) { }
-
+// getting the news api for science in ireland
   getStockNews():Observable<any>{
-    return this.stock.get('http://newsapi.org/v2/top-headlines?country=ie&category=science&apiKey=051be681cb68446c9be30fdc723d4148');
+    return this.stock.get('http://newsapi.org/v2/top-headlines?country=ie&category=science&apiKey=538d64ffe9f540ae86a47eae6509f215');
 
   }
 }

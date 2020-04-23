@@ -1,20 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-button [routerLink]="['/home']" >
+   <!-- buttons to move from page to page,
+    each button has an icon related to what it 
+    has on that page -->
+    <ion-button [routerLink]="['/home']" color="light" slot="secondary">
       <ion-icon name="home-sharp"></ion-icon>
     </ion-button>
-    <ion-button [routerLink]="['/bitcoin-news']">
+    <ion-button [routerLink]="['/bitcoin-news']" color="light" slot="secondary">
       <ion-icon name="logo-bitcoin"></ion-icon>
     </ion-button>
-    <ion-button [routerLink]="['/stock-market-news']">
+    <ion-button [routerLink]="['/stock-market-news']" color="light" slot="secondary">
       <ion-icon name="watch-sharp"></ion-icon>
     </ion-button>
-    <ion-button [routerLink]="['/business-news']">
+    <ion-button [routerLink]="['/business-news']" color="light" slot="secondary">
       <ion-icon name="newspaper-sharp"></ion-icon>
     </ion-button>
+    <ion-title size="small" slot="end" id="weazel">Weazel News</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<!-- This is for the content of the api in a card format,
+    using the ngFor to get the data from the data been sent from,
+  the api-->
 <ion-content [fullscreen]="true">
   <ion-card *ngFor="let tech of techData" id="tech">
     <ion-card-header>
@@ -23,6 +29,8 @@
       <ion-card-subtitle>{{tech.author}}</ion-card-subtitle>
       <ion-card-title color="warning">{{tech.title}}</ion-card-title>
     </ion-card-header>
+    <!-- !-- using interpolation to post the data in
+        the card --> 
     <ion-card-content>
       <p>{{tech.description}}</p>
       <br>

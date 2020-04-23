@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 export class BusinessService {
 
   constructor(private bus:HttpClient) { }
+  // getting the api key to send the tech news form the USA
   getBusinessNews():Observable<any>{
-    return this.bus.get('http://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=051be681cb68446c9be30fdc723d4148');
+    return this.bus.get('http://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=538d64ffe9f540ae86a47eae6509f215');
   }
 }

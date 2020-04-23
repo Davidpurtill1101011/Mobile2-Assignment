@@ -1,31 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-button [routerLink]="['/home']">
+    <!-- buttons to move from page to page,
+    each button has an icon related to what it 
+    has on that page -->
+    <ion-button [routerLink]="['/home']" color="light" slot="secondary">
       <ion-icon name="home-sharp"></ion-icon>
     </ion-button>
-    <ion-button [routerLink]="['/tech-news']">
+    <ion-button [routerLink]="['/tech-news']" color="light" slot="secondary">
       <ion-icon name="hardware-chip-sharp"></ion-icon>
     </ion-button>
-    <ion-button [routerLink]="['/stock-market-news']">
+    <ion-button [routerLink]="['/stock-market-news']" color="light" slot="secondary">
       <ion-icon name="logo-euro"></ion-icon>
     </ion-button>
-    <ion-button [routerLink]="['/business-news']">
+    <ion-button [routerLink]="['/business-news']" color="light" slot="secondary">
       <ion-icon name="newspaper-sharp"></ion-icon>
     </ion-button>
+    <ion-title size="small" slot="end" id="headline">Weazel News</ion-title>
   </ion-toolbar>
 </ion-header>
+<!-- This is for the content of the api in a card format,
+    using the ngFor to get the data from the data been sent from,
+  the api-->
 <ion-content>
-<ion-card *ngFor="let bit of bitData" id="tech"> 
-  <ion-card-header>
-    <a href="{{bit.url}}">
-      <img src="{{bit.urlToImage}}"></a>
-    <ion-card-subtitle>{{bit.author}}</ion-card-subtitle>
-    <ion-card-title color="warning">{{bit.title}}</ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <b>{{bit.description}}</b>
-    <br>
-    <b>{{bit.publishedAt}}</b>
-  </ion-card-content>
-</ion-card>
+  <ion-card *ngFor="let bit of bitData" id="tech">
+    <ion-card-header>
+      <a href="{{bit.url}}">
+        <img src="{{bit.urlToImage}}"></a>
+      <ion-card-subtitle>{{bit.author}}</ion-card-subtitle>
+      <ion-card-title color="warning">{{bit.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- using interpolation to post the data in
+        the card -->
+      <b>{{bit.description}}</b>
+      <br>
+      <b>{{bit.publishedAt}}</b>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
