@@ -6,13 +6,13 @@ import { StockService } from '../Services/stock.service';
   styleUrls: ['./stock-market-news.page.scss'],
 })
 export class StockMarketNewsPage implements OnInit {
-  stockData:any=[];
-  constructor(private stock:StockService) { }
+ scienceData:any=[];
+  constructor(private science:StockService) { }
 
   ngOnInit() {
-    this.stock.getStockNews().subscribe(
+    this.science.getStockNews().subscribe(
       (data)=>{
-        this.stockData = data.articles;
+        this.scienceData = data.articles;
       }
     );
   }

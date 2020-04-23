@@ -8,6 +8,6 @@ export class BusinessService {
 
   constructor(private bus:HttpClient) { }
   getBusinessNews():Observable<any>{
-    return this.bus.get('http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=051be681cb68446c9be30fdc723d4148');
+    return this.bus.get('http://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=051be681cb68446c9be30fdc723d4148');
   }
 }

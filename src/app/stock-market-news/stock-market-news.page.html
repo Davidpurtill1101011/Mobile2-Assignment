@@ -1,26 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-button [routerLink]="['/tech-news']">
+    <ion-button [routerLink]="['/home-news']">
       <ion-icon name="home-sharp"></ion-icon>
     </ion-button>
-    <ion-button [routerLink]="['/bitcoin-news']">Bitcoin</ion-button>
-    <ion-button [routerLink]="['/stock-market-news']">Stock</ion-button>
-    <ion-button [routerLink]="['/business-news']">Business</ion-button>
+    <ion-button [routerLink]="['/tech-news']">
+      <ion-icon name="hardware-chip-sharp"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['/bitcoin-market-news']">
+      <ion-icon name="logo-bitcoin"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['/business-news']">
+      <ion-icon name="newspaper-sharp"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngFor="let stock of stockData" id="tech">
+<ion-content >
+  <ion-card *ngFor="let science of scienceData" id="tech">
     <ion-card-header>
-      <a href="{{stock.url}}">
-        <img src="{{stock.urlToImage}}"></a>
-      <ion-card-subtitle>{{stock.author}}</ion-card-subtitle>
-      <ion-card-title color="warning">{{stock.title}}</ion-card-title>
+      <a href="{{science.url}}">
+        <img src="{{science.urlToImage}}"></a>
+      <ion-card-subtitle>{{science.author}}</ion-card-subtitle>
+      <ion-card-title color="warning">{{science.title}}</ion-card-title>
     </ion-card-header>
-    <ion-card-content >
-      <p>{{stock.description}}</p>
+    <ion-card-content>
+      <p>{{science.description}}</p>
       <br>
-      <p>{{stock.publishedAt}}</p>
+      <p>{{science.publishedAt}}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

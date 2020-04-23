@@ -1,12 +1,86 @@
-<ion-header [translucent]="true">
+<div>
   <ion-toolbar>
-    <ion-button [routerLink]="['/tech-news']">Tech</ion-button>
-    <ion-button [routerLink]="['/bitcoin-news']">Bitcoin</ion-button>
-    <ion-button [routerLink]="['/stock-market-news']">Stock</ion-button>
-    <ion-button [routerLink]="['/business-news']">Business</ion-button>
+    <ion-button [routerLink]="['/tech-news']" color="light">
+      <ion-icon name="hardware-chip-sharp"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['/bitcoin-news']" color="light">
+      <ion-icon name="logo-bitcoin"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['/stock-market-news']" color="light">
+      <ion-icon name="flask-sharp"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['/business-news']" color="light">
+      <ion-icon name="watch-sharp"></ion-icon>
+    </ion-button>
+    <ion-title size="small" slot="end" id="weazel">Weazel News</ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-
-</ion-content>
+  <ion-content [fullscreen]="true" id="pic">
+    <div class="hr"> </div>
+    <br>
+    <h1 id="weazel">Headlines</h1>
+    <ion-card *ngFor="let hme of homeData; let i = index" id="tech">
+      <div *ngIf="i<2">
+        <ion-card-header>
+          <a href="{{hme.url}}">
+            <img src="{{hme.urlToImage}}"></a>
+          <ion-card-subtitle>{{hme.author}}</ion-card-subtitle>
+          <ion-card-title color="warning">{{hme.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{hme.description}}</p>
+          <br>
+          <p>{{hme.publishedAt}}</p>
+        </ion-card-content>
+      </div>
+    </ion-card>
+    <!-- This is the headline for the bitcoin news -->
+    <ion-card *ngFor="let bit of bit1Data; let i = index" id="tech">
+      <div *ngIf="i<2">
+        <ion-card-header>
+          <a href="{{bit.url}}">
+            <img src="{{bit.urlToImage}}"></a>
+          <ion-card-subtitle>{{bit.author}}</ion-card-subtitle>
+          <ion-card-title color="warning">{{bit.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{bit.description}}</p>
+          <br>
+          <p>{{bit.publishedAt}}</p>
+        </ion-card-content>
+      </div>
+    </ion-card>
+    <!-- THIs is the news for the  -->
+    <ion-card *ngFor="let bus1 of bus1Data; let i = index" id="tech">
+      <div *ngIf="i<2">
+        <ion-card-header>
+          <a href="{{bus1.url}}">
+            <img src="{{bus1.urlToImage}}"></a>
+          <ion-card-subtitle>{{bus1.author}}</ion-card-subtitle>
+          <ion-card-title color="warning">{{bus1.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{bus1.description}}</p>
+          <br>
+          <p>{{bus1.publishedAt}}</p>
+        </ion-card-content>
+      </div>
+    </ion-card>
+    <!-- news for the next thing -->
+    <ion-card *ngFor="let stk of stk1Data; let i = index" id="tech">
+      <div *ngIf="i<3">
+        <ion-card-header>
+          <a href="{{stk.url}}">
+            <img src="{{stk.urlToImage}}"></a>
+          <ion-card-subtitle>{{stk.author}}</ion-card-subtitle>
+          <ion-card-title color="warning">{{bit.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{stk.description}}</p>
+          <br>
+          <p>{{stk.publishedAt}}</p>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </ion-content>
+</div>
