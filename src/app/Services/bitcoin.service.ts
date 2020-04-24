@@ -8,6 +8,6 @@ export class BitcoinService {
   constructor(private bitcn:HttpClient) { }
   // getting the api for the bitcoin news
   getBitcoinNews():Observable<any>{
-    return this.bitcn.get('http://newsapi.org/v2/everything?q=bitcoin&from=2020-03-23&sortBy=publishedAt&apiKey=538d64ffe9f540ae86a47eae6509f215');
+    return this.bitcn.get('http://newsapi.org/v2/everything?q=bitcoin&from=2020-03-24&sortBy=publishedAt&apiKey=8399ea46a5e14943aab355c9cafa28b5');
   }
 }
